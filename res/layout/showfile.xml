@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ 
+   <LinearLayout     android:layout_height="wrap_content"
+  					  android:layout_width="wrap_content"
+  					  android:layout_alignParentBottom="true" 
+  					  android:orientation="vertical"
+  					  xmlns:android="http://schemas.android.com/apk/res/android"   
+  					  android:id="@+id/mainLay" 
+  					  >
+  
+    <TableLayout android:layout_weight="1" android:layout_width="match_parent" android:layout_height="wrap_content"  android:id="@+id/tb1" >
+        <TableRow>
+      	   	<TextView android:text="文件名" android:textSize="10pt" android:layout_margin="5pt" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:layout_weight="2"  /> 
+        	<TextView android:text="文件大小" android:textSize="10pt" android:layout_margin="5pt" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"  ></TextView> 
+         	<TextView android:text="修改时间" android:textSize="10pt" android:layout_margin="5pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>
+      		<TextView android:text="上传" android:textSize="10pt" android:layout_margin="5pt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>
+   
+   </TableRow>
+   
+   </TableLayout>
+
+        <ListView  android:id="@+id/android:list"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent" 
+    android:layout_weight="24"
+    android:layoutAnimation="@anim/list_animation"
+    > 
+         </ListView> 
+
+ <ProgressBar  android:layout_weight="1" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="20" 
+     		  android:id="@+id/upload_pbr"
+     		  style="?android:attr/progressBarStyleHorizontal"
+     		  />
+ <LinearLayout android:layout_width="match_parent"
+     			android:layout_height="wrap_content"
+     			android:orientation="horizontal"
+     			android:layout_weight="1"
+     			>
+ <LinearLayout android:layout_width="match_parent"
+     			android:layout_height="wrap_content"
+     			android:orientation="vertical" 
+     			android:layout_weight="7"
+     			>
+     <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/play" android:text="播放"></Button>
+     <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/pause" android:text="暂停"></Button>
+     <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/stop" android:text="停止"></Button>
+   
+ </LinearLayout>
+ 
+ <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2">
+
+ <TextView
+     android:id="@+id/lrc"
+     android:layout_width="match_parent" 
+     android:layout_height="wrap_content"
+     android:layout_weight="122222"
+     android:gravity="center"
+     android:text="歌词显示区" >
+</TextView>
+
+ <LinearLayout
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:layout_weight="2"
+     android:orientation="horizontal" >
+
+     <TextView
+         android:id="@+id/timeShow"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="00:00" />
+
+     <SeekBar
+         android:id="@+id/sb"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" />
+ </LinearLayout>
+
+ </LinearLayout>
+</LinearLayout>
+ </LinearLayout> 
